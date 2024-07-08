@@ -3,17 +3,17 @@ import { ConfigItem } from '../../services/config-item';
 import { ConfigService } from '../../services/config.service';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-contactUs',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './contactUS.component.html',
+  styleUrl: './contactUs.component.css'
 })
-export class AboutComponent {
-  about!: ConfigItem | undefined;
+export class ContactUsComponent {
+  pricing!: ConfigItem | undefined;
   configService: ConfigService = inject(ConfigService);
 
   constructor()  {
-    this.about = this.configService.getPageByName("about");
+    this.pricing = this.configService.getPageByName("contactUs");
   }
 }

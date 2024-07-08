@@ -3,17 +3,18 @@ import { ConfigItem } from '../../services/config-item';
 import { ConfigService } from '../../services/config.service';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-gallery1',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './piercingGallery.component.html',
+  styleUrl: './piercingGallery.component.css'
 })
-export class AboutComponent {
-  about!: ConfigItem | undefined;
+export class PiercingGalleryComponent {
+  gallery!: ConfigItem | undefined;
   configService: ConfigService = inject(ConfigService);
 
   constructor()  {
-    this.about = this.configService.getPageByName("about");
+    this.gallery = this.configService.getPageByName("piercing");
   }
+  
 }

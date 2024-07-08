@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { ConfigItem } from '../../services/config-item';
 import { ConfigService } from '../../services/config.service';
+import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router'
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

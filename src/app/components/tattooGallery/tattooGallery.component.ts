@@ -3,17 +3,17 @@ import { ConfigItem } from '../../services/config-item';
 import { ConfigService } from '../../services/config.service';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-gallery',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './tattooGallery.component.html',
+  styleUrl: './tattooGallery.component.css'
 })
-export class AboutComponent {
-  about!: ConfigItem | undefined;
+export class TattooGalleryComponent {
+  gallery!: ConfigItem | undefined;
   configService: ConfigService = inject(ConfigService);
 
   constructor()  {
-    this.about = this.configService.getPageByName("about");
+    this.gallery = this.configService.getPageByName("tattoo");
   }
 }

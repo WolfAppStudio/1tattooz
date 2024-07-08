@@ -29,14 +29,8 @@ export interface ConfigItem {
             Description: string;
             title: string;
             subTitle: string;
-            currency: string;
-            price: number;
-            featured: boolean;
-            Downloads: string;
-            Extensions: string;
-            Tutorials: string;
-            Support: string;
-            updates: string;
+            image:string, 
+            imageName:string,
             buttonText: string;
         }[];
         feedbackBlock?: {
