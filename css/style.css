@@ -2148,6 +2148,12 @@ blockquote {
 ===============================*/
 @media (max-width: 480px) {
 
+    [class*='col-'] {
+        padding: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
     #wrapper {
         margin:0;
         padding:0;
@@ -2240,6 +2246,12 @@ blockquote {
 /* Mobile to Tablet Portrait
 ===============================*/
 @media (min-width: 480px) and (max-width: 767px) {
+
+    [class*='col-'] {
+        padding: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 
     #wrapper {
         margin:0;
