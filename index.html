@@ -33,22 +33,22 @@
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-     <!-- Include JavaScript resources -->
-     <script src="js/jquery.1.8.3.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/featherlight.min.js"></script>
-     <script src="js/featherlight.gallery.min.js"></script>
-     <script src="js/jquery.enllax.min.js"></script>
-     <script src="js/jquery.scrollUp.min.js"></script>
-     <script src="js/jquery.easing.min.js"></script>
-     <script src="js/jquery.stickyNavbar.min.js"></script>
-     <script src="js/jquery.waypoints.min.js"></script>
-     <script src="js/images-loaded.min.js"></script>
-     <script src="js/lightbox.min.js"></script>
-     <script src="js/site.js"></script>
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
 
-     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             function loadHTML(id, url) {
                 fetch(url)
                     .then(response => {
@@ -61,339 +61,26 @@
                     .catch(error => console.error('Error loading HTML:', error));
             }
 
-            loadHTML('preloaderX', 'preloader.html');
-            loadHTML('borderX', 'border.html');
-            loadHTML('bannerX', 'banner.html');
-            // loadHTML('pricing', 'pricing.html');
-            // loadHTML('content', 'content.html');
-            // loadHTML('footer', 'footer.html');
+            loadHTML('preloaderX', './blocks/preloader.html');
+            loadHTML('borderX', './blocks/border.html');
+            loadHTML('bannerX', './blocks/banner.html');
+            loadHTML('pricingX', './blocks/pricing.html');
+            loadHTML('contentX', './blocks/content.html');
+            loadHTML('footerX', './blocks/footer.html');
         });
     </script>
 </head>
 
 <body>
-
     <div id="preloaderX"></div>
     <div id="borderX"></div>
 
-    <!-- Preloader -->
-    <!-- <div id="preloader">
-        <div id="status" class="la-ball-triangle-path">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div> -->
-    <!--End of Preloader-->
-
-    <!-- <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
-        <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
-        <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-        </div>
-        <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
-        <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
-    </div> -->
-
     <div id="wrapper">
- 
         <div id="bannerX"></div>
-
-        <!--Pricing Tables-->
-        <section id="pricing" class="secondary-color text-center scrollto clearfix"
-            style="padding-bottom: 90px !important">
-            <div class="row clearfix">
-
-                <div class="section-heading">
-                    <h3>Our Services</h3>
-                    <h2 class="section-title">Find out more</h2>
-                </div>
-
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="pricing-block-content">
-                        <h2>TATTOO</h2>
-                        <p class="pricing-sub">Trust your vibes, energy never lies.</p>
-                        <div>
-                            <img src="images/banner-images/TATTOO.jpg" />
-                        </div>
-                        <a class="button" href="#tattoo">SHOW TATTOO GALLERY</a>
-                    </div>
-                </div>
-
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="pricing-block-content">
-                        <h2>PIERCING</h2>
-                        <p class="pricing-sub">Just a touch of sparkle.</p>
-                        <div>
-                            <img src="images/banner-images/PIERCING.jpg" />
-                        </div>
-                        <a class="button" href="#piercing">SHOW PIERCING GALLERY</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!--End of Pricing Tables-->
-
-        <!--Main Content Area-->
-        <main id="content">
-
-            <!--Introduction-->
-            <section id="about" class="introduction scrollto">
-                <div class="row clearfix">
-                    <div class="col-38">
-                        <!-- <h3>{{about?.data?.title}}</h3> -->
-                        <h2 class="section-title">Why Choose 1tattooz?</h2>
-                        <h3 class="section-subtitle">1tattooz was built on a foundation of passion and professionalism.
-                            We stand out as a unique service oriented studio with intricate ties to the community it
-                            serves. Our artists have over 10 plus years of combined experience.</h3>
-                    </div>
-                    <div class="col-38">
-
-                        <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-child fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>Consultation</h4>
-                                <p>Your journey begins with a one-on-one consultation with our experienced artists.
-                                    We’ll take the time to understand your vision, offering insights and suggestions to
-                                    refine your design.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-child fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>Art</h4>
-                                <p>Your journey begins with a one-on-one consultation with our experienced artists.
-                                    We’ll take the time to understand your vision, offering insights and suggestions to
-                                    refine your design.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-paint-brush fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>Execution</h4>
-                                <p>With your design finalized, it’s time for the ink to meet your skin. Our artists work
-                                    with precision, ensuring the process is as comfortable as possible.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-plus fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>Aftercare</h4>
-                                <p>Tattoo care doesn’t end with the needle; it’s an ongoing process. We’ll provide you
-                                    with thorough aftercare instructions to ensure your tattoo heals beautifully.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--End of Introduction-->
-            <section id="tattoo" class="secondary-color text-center scrollto clearfix"
-                style="padding-top: 90px !important">
-                <div class="row clearfix">
-                    <div class="section-heading">
-                        <h2 class="section-title">Tatto Gallery</h2>
-                    </div>
-                </div>
-                <!--Gallery-->
-                <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                    data-featherlight-filter="a">
-                    <a href="images/Tatto/Tatto_1.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_1.jpg" alt="Tatto_1" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_2.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_2.jpg" alt="Tatto_2" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_3.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_3.jpg" alt="Tatto_3" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_4.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_4.jpg" alt="Tatto_4" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_5.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_5.jpg" alt="Tatto_5" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_6.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_6.jpg" alt="Tatto_6" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_7.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_7.jpg" alt="Tatto_7" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_8.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_8.jpg" alt="Tatto_8" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_9.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_9.jpg" alt="Tatto_9" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_10.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_10.jpg" alt="Tatto_10" loading="lazy"/>
-                    </a>
-                    <a href="images/Tatto/Tatto_11.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Tatto/Tatto_11.jpg" alt="Tatto_11" loading="lazy"/>
-                        <a href="images/Tatto/Tatto_12.jpg" data-featherlight="image" class="wow fadeIn"
-                            data-wow-delay="0.1s">
-                            <img src="images/Tatto/Tatto_12.jpg" alt="Tatto_12" loading="lazy"/>
-                        </a>
-                </aside>
-                <!--End of Gallery-->
-            </section>
-
-            <section id="piercing" class="secondary-color text-center scrollto clearfix"
-                style="padding-top: 90px !important">
-                <div class="row clearfix">
-                    <div class="section-heading">
-                        <h2 class="section-title">Piercing Gallery</h2>
-                    </div>
-                </div>
-                <!--Gallery-->
-                <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                    data-featherlight-filter="a">
-                    <a href="images/Piercing/Piercing_1.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s" >
-                        <img src="images/Piercing/Piercing_1.jpg" alt="Piercing_1.jpg" loading="lazy" />
-                    </a>
-                    <a href="images/Piercing/Piercing_2.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_2.jpg" alt="Piercing_2.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_3.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_3.jpg" alt="Piercing_3.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_4.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_4.jpg" alt="Piercing_4.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_5.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_5.jpg" alt="Piercing_5.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_6.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_6.jpg" alt="Piercing_6.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_7.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_7.jpg" alt="Piercing_7.jpg" loading="lazy"/>
-                    </a>
-                    <a href="images/Piercing/Piercing_8.jpg" data-featherlight="image" class="wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img src="images/Piercing/Piercing_8.jpg" alt="Piercing_8.jpg" loading="lazy"/>
-                    </a>
-                </aside>
-                <!--End of Gallery-->
-            </section>
-
-            <!--Pricing Tables-->
-            <section id="contactus" class="secondary-color text-center scrollto clearfix" style="padding-bottom: 90px !important; padding-top: 90px !important">
-                <div class="row clearfix">
-
-                    <div class="section-heading">
-                        <h2 class="section-title">We’d love to hear from you</h2>
-                        <h3>Whether you’re curious about features, a free trial, or even press—we’re ready to answer any
-                            and all questions.</h3>
-                    </div>
-
-                    <div class="pricing-block col-1 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content" style="border: 0px solid #fff !important;">
-                            <div class="pricing">
-                                <ul>
-                                    <li>
-                                        <h2 style="text-align: left !important; text-transform:uppercase !important;"> <b> 1Tattooz </b> penny black tattoo parlour ltd. </h2>
-                                        <h3 style="text-align: left !important;">LAURIE WALK, THE LIBERTY SHOPPING CENTRE ROMFORD ESSEX RM1 3RT</h3>
-                                        <h3 style="text-align: left !important;"></h3>
-                                        <h3 style="text-align: left !important;">United Kingdom</h3>
-                                    </li>
-                                    <li>
-                                        <h3 style="text-align: left !important;"> <i class="fa fa-whatsapp fa-2x"> </i> &nbsp; &nbsp; <a href="https://wa.me/+447466551559">+44 7466 551559</a>
-                                        </h3>
-                                    </li>
-                                    <li>
-                                        <h3 style="text-align: left !important;">  <i class="fa fa-instagram fa-2x"> </i> &nbsp; &nbsp; <a href="http://www.instagram.com/1tattooz">1tattooz</a>
-                                        </h3>
-                                    </li>
-                                    <li>
-                                        <h3 style="text-align: left !important;"> <i class="fa fa-phone fa-2x"> </i> &nbsp; &nbsp; <a href="tel:+447466551559"> +44 7466551559</a></h3>
-                                    </li>
-                                    <li>
-                                        <h3 style="text-align: left !important;"> <i class="fa fa-envelope fa-2x"> </i> &nbsp; &nbsp; <a
-                                                href="mailto:1tattooz@gmail.com">1tattooz&#64;gmail.com</a></h3>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pricing">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.459609973582!2d0.18065941293430274!3d51.57813937171195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4b5e55ce51b%3A0xd5910ddeae965c22!2sThe%20Liberty%20Shopping%20Centre!5e0!3m2!1sen!2sae!4v1720402792880!5m2!1sen!2sae"
-                                    style="border:0; width: 100% !important; height: 320px !important;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--End of Pricing Tables-->
-        </main>
-        <!--End Main Content Area-->
-        
-        <!--Footer-->
-        <footer id="landing-footer" class="clearfix">
-            <div class="row clearfix">
-
-                <p id="copyright" class="col-2">©2024 @1Tattooz</p>
-
-                <!--Social Icons in Footer-->
-                <ul class="col-2 social-icons">
-                    <li>
-                        <a target="_blank" title="Email" href="mailto:1tattooz@gmail.com">
-                            <i class="fa fa-envelope fa-1x"></i><span>Email</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" title="1tattooz" href="http://www.instagram.com/1tattooz">
-                            <i class="fa fa-instagram "></i><span>Instagram</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" title="+447466551559" href="https://wa.me/+447466551559">
-                            <i class="fa fa-whatsapp fa-1x"></i><span>Whatsapp</span>
-                        </a>
-                    </li>
-                </ul>
-                <!--End of Social Icons in Footer-->
-            </div>
-        </footer>
-        <!--End of Footer-->
-
+        <div id="pricingX"></div>
+        <div id="contentX"></div>
+        <div id="footerX"></div>
     </div>
 </body>
+
 </html>
