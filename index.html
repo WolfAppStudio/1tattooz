@@ -46,27 +46,53 @@
      <script src="js/images-loaded.min.js"></script>
      <script src="js/lightbox.min.js"></script>
      <script src="js/site.js"></script>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function loadHTML(id, url) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.text();
+                    })
+                    .then(data => document.getElementById(id).innerHTML = data)
+                    .catch(error => console.error('Error loading HTML:', error));
+            }
+
+            loadHTML('preloaderX', 'preloader.html');
+            loadHTML('borderX', 'border.html');
+            // loadHTML('banner', 'banner.html');
+            // loadHTML('pricing', 'pricing.html');
+            // loadHTML('content', 'content.html');
+            // loadHTML('footer', 'footer.html');
+        });
+    </script>
 </head>
 
 <body>
 
+    <div id="headerX"></div>
+    <div id="borderX"></div>
+
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status" class="la-ball-triangle-path">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
     <!--End of Preloader-->
 
-    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <!-- <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
         <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
         <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
         </div>
         <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
         <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
-    </div>
+    </div> -->
 
     <div id="wrapper">
 
